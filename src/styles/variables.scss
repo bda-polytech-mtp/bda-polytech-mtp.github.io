@@ -1,0 +1,10 @@
+$bg-color: rgb(229, 6, 50);
+$menu-bg: rgb(231, 231, 231);
+
+$screen-phone: 700px;
+
+@mixin phone {
+    @media (max-width: #{$screen-phone}) {
+        @content;
+    }
+}

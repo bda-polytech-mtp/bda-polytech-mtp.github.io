@@ -1,0 +1,12 @@
+main {
+    height: 100%;
+    overflow: auto;
+    color: white;
+    padding-top: 7em;
+    padding-left: 80px;
+
+    @media (max-width: 700px) {
+        padding-left: 20px;
+    }
+
+}

@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+
+.card {
+    position: relative;
+
+    @include phone {
+        margin-bottom: 10px;
+    }
+}
+
+.cards-deck {
+    display: flex;
+    flex-direction: row;
+
+    @include phone {
+        flex-direction: column;
+    }
+
+    align-content: center;
+}
+
+.keven-card {
+    transform: rotate(-10deg);
+
+    @include phone {
+        transform: none;
+    }
+
+    z-index: 2;
+}
+
+.schedule-card {
+    z-index: 1;
+}
+
+.remy-card {
+    transform: rotate(10deg);
+
+    @include phone {
+        transform: none;
+    }
+
+    z-index: 0;
+}
