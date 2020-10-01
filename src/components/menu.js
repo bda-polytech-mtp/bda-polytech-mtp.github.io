@@ -2,7 +2,6 @@ import React from 'react';
 import { push as PushMenu } from "react-burger-menu";
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from "gatsby-image";
-import useMatchMedia from 'react-simple-matchmedia'
 import './menu.scss';
 
 export const logoQuery = graphql`
@@ -19,16 +18,15 @@ export const logoQuery = graphql`
 
 export const Menu = (props) => {
 
-    const isMobile = useMatchMedia('phone');
     const data = useStaticQuery(logoQuery);
 
     return <div id="wrapper">
-        <PushMenu pageWrapId={ "main-content" } outerContainerId={ "wrapper" } isOpen={ !isMobile } noOverlay={!isMobile} >
+        <PushMenu pageWrapId={ "main-content" } outerContainerId={ "wrapper" } >
             <div className="branding">
                 <div className="brand">
                     <Img fluid={ data.file.childImageSharp.fluid } style={{ width: `100px` }} />
                 </div>
-                <h2>Bureaux des arts</h2>
+                <h2>Bureau des arts</h2>
             </div>
             <Link className="menu-item" to="/ludotech/">
                 <span>Ludotech</span>

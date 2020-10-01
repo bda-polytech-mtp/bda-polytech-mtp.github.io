@@ -16,5 +16,6 @@ module.exports = {
         path: `${__dirname}/static/`,
       },
     },
+    'gatsby-plugin-react-helme',
   ],
 }
